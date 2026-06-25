@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swarangi Resume Website</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 30px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 22px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .card h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #ffffff;
+      margin-top: 8px;
+      border-radius: 10px;
+    }
+
+    .card p,
+    .card li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #f3f4f6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .skill:hover {
+      background: white;
+      color: #764ba2;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 36px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>Swarangi Keshav Gawade</h1>
+      <p>Student | Creative Learner</p>
+    </div>
+
+    <div class="content">
+
+      <div class="card">
+        <h2>Career Objective</h2>
+        <p>
+          Motivated and hardworking student seeking an opportunity to apply
+          computer knowledge, communication abilities, and presentation skills
+          in a professional environment while learning and contributing to
+          organizational success.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <p>Completed Higher Secondary Education (12th Passed)</p>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">Basic Computer Knowledge</div>
+          <div class="skill">MS Office</div>
+          <div class="skill">PowerPoint</div>
+          <div class="skill">Communication</div>
+          <div class="skill">Teamwork</div>
+          <div class="skill">Presentation Skills</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Certification</h2>
+        <p>MS-CIT (Maharashtra State Certificate in Information Technology)</p>
+      </div>
+
+      <div class="card">
+        <h2>Project</h2>
+        <ul>
+          <li>Created attractive presentations using Microsoft PowerPoint.</li>
+          <li>Designed slides with visuals, formatting, and structured content.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Strengths</h2>
+        <ul>
+          <li>Strong communication and interpersonal skills</li>
+          <li>Positive attitude and quick learning ability</li>
+          <li>Good presentation and organizational skills</li>
+          <li>Responsible and team-oriented</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2026 Swarangi Keshav Gawade | Resume Website
+    </div>
+
+  </div>
+</body>
+</html>

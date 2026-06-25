@@ -1,0 +1,45 @@
+Name: Your Full Name
+Phone: +91-XXXXXXXXXX
+Email: yourname@example.com
+
+Address: Your City, State, India
+
+Career Objective
+
+A short statement about your goal.
+Example:
+To obtain a position where I can utilize my skills and grow professionally while contributing to the organization’s success.
+
+Education
+
+Degree / Course Name
+College/School Name, University/Board
+Year of Passing: XXXX
+Percentage/CGPA: XX%
+
+Skills
+Basic Computer Knowledge
+MS Word / Excel / PowerPoint
+Communication Skills
+Teamwork
+Time Management
+Experience (if any)
+
+Job Title / Internship
+Company Name
+Duration: Month Year – Month Year
+
+Responsibility 1
+Responsibility 2
+
+(If no experience, write: Fresher)
+
+Projects (Optional)
+
+Project Title
+Short description of what you did and what tools you used.
+
+Languages Known
+English
+Hindi
+Marathi (or your language)

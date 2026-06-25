@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creative Luxury Resume</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:
+      linear-gradient(135deg,#fff6f9,#f3efff,#eef8ff);
+      padding:40px;
+      color:#444;
+    }
+
+    .resume{
+      max-width:1000px;
+      margin:auto;
+      background:rgba(255,255,255,0.88);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:
+      0 20px 50px rgba(0,0,0,0.10),
+      0 10px 25px rgba(0,0,0,0.06);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.7);
+    }
+
+    /* HEADER */
+
+    .header{
+      background:
+      linear-gradient(135deg,#dcc8ff,#ffdce8,#cfe8ff);
+      padding:70px 40px 100px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .header::before{
+      content:'';
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,0.25);
+      border-radius:50%;
+      top:-120px;
+      left:-80px;
+    }
+
+    .header::after{
+      content:'';
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:rgba(255,255,255,0.18);
+      border-radius:50%;
+      bottom:-120px;
+      right:-60px;
+    }
+
+    .profile-circle{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      background:white;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:48px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      position:relative;
+      z-index:2;
+    }
+
+    .name{
+      font-family:'Playfair Display', serif;
+      font-size:42px;
+      font-weight:700;
+      margin-top:25px;
+      color:#2f2f2f;
+      letter-spacing:2px;
+      position:relative;
+      z-index:2;
+    }
+
+    .title{
+      margin-top:10px;
+      font-size:17px;
+      color:#555;
+      position:relative;
+      z-index:2;
+    }
+
+    .contact-box{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:15px;
+      position:relative;
+      z-index:2;
+    }
+
+    .contact-item{
+      background:rgba(255,255,255,0.75);
+      padding:12px 18px;
+      border-radius:14px;
+      font-size:14px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .contact-item:hover{
+      transform:translateY(-3px);
+    }
+
+    /* CONTENT */
+
+    .content{
+      padding:60px 50px;
+    }
+
+    .section{
+      margin-bottom:45px;
+    }
+
+    .section-title{
+      font-size:28px;
+      color:#6b52a3;
+      margin-bottom:25px;
+      position:relative;
+      display:inline-block;
+      font-weight:600;
+    }
+
+    .section-title::after{
+      content:'';
+      position:absolute;
+      width:70%;
+      height:4px;
+      left:0;
+      bottom:-8px;
+      background:linear-gradient(to right,#d7b8ff,#ffcadf);
+      border-radius:10px;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:
+      linear-gradient(145deg,#fff9fc,#f4f8ff);
+      padding:25px;
+      border-radius:22px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      transition:0.35s;
+      border:1px solid rgba(255,255,255,0.9);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:'';
+      position:absolute;
+      width:120px;
+      height:120px;
+      background:rgba(221,193,255,0.18);
+      border-radius:50%;
+      top:-40px;
+      right:-40px;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 18px 35px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#444;
+      font-size:19px;
+      position:relative;
+      z-index:2;
+    }
+
+    ul{
+      padding-left:18px;
+      position:relative;
+      z-index:2;
+    }
+
+    ul li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    /* SKILL BADGES */
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:10px;
+      position:relative;
+      z-index:2;
+    }
+
+    .badge{
+      background:
+      linear-gradient(135deg,#e7d7ff,#ffdbe8);
+      padding:10px 18px;
+      border-radius:30px;
+      font-size:14px;
+      font-weight:500;
+      color:#4b4b4b;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* HOBBIES */
+
+    .hobby-box{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+      margin-top:15px;
+    }
+
+    .hobby{
+      width:180px;
+      background:
+      linear-gradient(135deg,#fff0f6,#eef7ff);
+      border-radius:22px;
+      padding:25px 15px;
+      text-align:center;
+      box-shadow:0 10px 20px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .hobby:hover{
+      transform:scale(1.05);
+    }
+
+    .hobby-icon{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .hobby h4{
+      color:#555;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      text-align:center;
+      padding:28px;
+      background:#faf7ff;
+      color:#777;
+      font-size:14px;
+      border-top:1px solid #eee;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      body{
+        padding:15px;
+      }
+
+      .content{
+        padding:35px 20px;
+      }
+
+      .name{
+        font-size:30px;
+      }
+
+      .contact-box{
+        flex-direction:column;
+        align-items:center;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="profile-circle">👩</div>
+
+      <div class="name">
+        SWARA SAMEER SATARDEKAR
+      </div>
+
+      <div class="title">
+        Creative Learner • Digital Skills Enthusiast • AI Tools Explorer
+      </div>
+
+      <div class="contact-box">
+
+        <div class="contact-item">
+          📞 9067896252
+        </div>
+
+        <div class="contact-item">
+          📧 satardekarswara87@gmail.com
+        </div>
+
+        <div class="contact-item">
+          📍 At Post Banda, Near Post Office
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <!-- TECHNICAL SKILLS -->
+
+      <div class="section">
+
+        <div class="section-title">
+          Technical Skills
+        </div>
+
+        <div class="card-grid">
+
+          <div class="card">
+
+            <h3>🤖 AI Tools</h3>
+
+            <div class="badges">
+              <div class="badge">ChatGPT</div>
+              <div class="badge">Gemini</div>
+              <div class="badge">Microsoft Copilot</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <h3>💼 Productivity Tools</h3>
+
+            <div class="badges">
+              <div class="badge">MS Word</div>
+              <div class="badge">MS Excel</div>
+              <div class="badge">PowerPoint</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <h3>🌐 Internet & Communication</h3>
+
+            <div class="badges">
+              <div class="badge">Google Chrome</div>
+              <div class="badge">Gmail</div>
+              <div class="badge">Zoom</div>
+              <div class="badge">Cloud Storage</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SPECIAL SKILLS -->
+
+      <div class="section">
+
+        <div class="section-title">
+          Special Skills Learned
+        </div>
+
+        <div class="card-grid">
+
+          <div class="card">
+
+            <h3>💻 Computer Fundamentals</h3>
+
+            <ul>
+              <li>Knowledge of computers, software, and operating systems</li>
+              <li>File management and system navigation</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>🌍 Internet & Digital Literacy</h3>
+
+            <ul>
+              <li>Web browsing and online safety awareness</li>
+              <li>Email communication and attachment handling</li>
+              <li>Cybersecurity and digital privacy basics</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>📊 Office Productivity</h3>
+
+            <ul>
+              <li>Professional document formatting</li>
+              <li>Spreadsheets, formulas, and charts</li>
+              <li>Creative presentation designing</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>📈 Data Handling</h3>
+
+            <ul>
+              <li>Basic data organization and analysis</li>
+              <li>Creating reports, graphs, and tables</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>☁ Digital Collaboration</h3>
+
+            <ul>
+              <li>Virtual meetings and teamwork tools</li>
+              <li>Cloud storage and online file sharing</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>🏛 E-Governance & Services</h3>
+
+            <ul>
+              <li>Online forms and digital payment systems</li>
+              <li>Government portals and e-services usage</li>
+            </ul>
+
+          </div>
+
+          <div class="card">
+
+            <h3>🧠 Problem Solving</h3>
+
+            <ul>
+              <li>Logical thinking and analytical skills</li>
+              <li>Task management and productivity skills</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- HOBBIES -->
+
+      <div class="section">
+
+        <div class="section-title">
+          Hobbies & Interests
+        </div>
+
+        <div class="hobby-box">
+
+          <div class="hobby">
+            <div class="hobby-icon">🎨</div>
+            <h4>Painting</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">📚</div>
+            <h4>Studying</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">💻</div>
+            <h4>Learning Technology</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">🌸</div>
+            <h4>Creative Activities</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      ✨ Designed with Elegant Pastel Luxury Style ✨
+    </div>
+
+  </div>
+
+</body>
+</html>

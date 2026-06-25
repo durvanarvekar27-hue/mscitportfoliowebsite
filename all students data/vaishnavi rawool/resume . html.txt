@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    .resume {
+        max-width: 900px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        color: #222;
+        margin-bottom: 5px;
+    }
+
+    .contact {
+        color: #666;
+        font-size: 14px;
+    }
+
+    h2 {
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    .section {
+        margin-bottom: 15px;
+    }
+
+    .job, .education {
+        margin-bottom: 15px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    ul {
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skill {
+        background: #e8e8e8;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="resume">
+
+    <div class="header">
+        <h1>Your Name</h1>
+        <div class="contact">
+            Email: your.email@example.com |
+            Phone: +91 XXXXX XXXXX |
+            LinkedIn: linkedin.com/in/yourprofile |
+            Location: City, Country
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>
+            Motivated and detail-oriented professional with experience in
+            software development, problem-solving, and teamwork. Passionate
+            about building efficient and scalable solutions.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Work Experience</h2>
+
+        <div class="job">
+            <div class="title">
+                <span>Software Developer - ABC Company</span>
+                <span>2022 - Present</span>
+            </div>
+            <ul>
+                <li>Developed and maintained web applications.</li>
+                <li>Improved system performance and user experience.</li>
+                <li>Collaborated with cross-functional teams.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="title">
+                <span>Intern - XYZ Company</span>
+                <span>2021 - 2022</span>
+            </div>
+            <ul>
+                <li>Assisted in software testing and debugging.</li>
+                <li>Created technical documentation.</li>
+                <li>Participated in project development activities.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+
+        <div class="education">
+            <div class="title">
+                <span>Bachelor of Technology (Computer Science)</span>
+                <span>2018 - 2022</span>
+            </div>
+            <p>University Name</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Portfolio Website:</strong> Designed and developed a personal portfolio website.</li>
+            <li><strong>Task Manager App:</strong> Built a full-stack task management application.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Web Development Certification</li>
+            <li>Cloud Computing Fundamentals</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

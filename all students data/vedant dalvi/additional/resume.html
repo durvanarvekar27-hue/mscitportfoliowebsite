@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vedant Dalvi</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* HEADER */
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      animation: bgMove 8s infinite alternate;
+    }
+
+    @keyframes bgMove{
+      0%{filter:hue-rotate(0deg);}
+      100%{filter:hue-rotate(40deg);}
+    }
+
+    header img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      border:5px solid white;
+      margin-bottom:20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-15px);}
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:1.2rem;
+      opacity:0.9;
+    }
+
+    /* SECTION */
+    section{
+      padding:60px 10%;
+    }
+
+    .title{
+      font-size:2rem;
+      margin-bottom:30px;
+      color:#38bdf8;
+      position:relative;
+    }
+
+    .title::after{
+      content:'';
+      width:80px;
+      height:4px;
+      background:#38bdf8;
+      position:absolute;
+      left:0;
+      bottom:-10px;
+    }
+
+    /* ABOUT */
+    .about{
+      line-height:1.8;
+      font-size:1.1rem;
+    }
+
+    /* SKILLS */
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .skill{
+      padding:12px 20px;
+      background:#1e293b;
+      border-radius:30px;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .skill:hover{
+      transform:scale(1.1);
+      background:#38bdf8;
+      color:black;
+    }
+
+    /* PROJECTS */
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* CONTACT */
+    .contact p{
+      margin:10px 0;
+      font-size:1.1rem;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    /* ANIMATION */
+    .hidden{
+      opacity:0;
+      transform:translateY(50px);
+      transition:all 1s;
+    }
+
+    .show{
+      opacity:1;
+      transform:translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Profile">
+    <h1>Vedant Dalvi</h1>
+    <p>Frontend Developer | Web Designer | Programmer</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="hidden">
+    <h2 class="title">About Me</h2>
+    <p class="about">
+      I am a passionate web developer who creates modern,
+      responsive and animated websites using HTML, CSS and JavaScript.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="hidden">
+    <h2 class="title">Skills</h2>
+
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">Python</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="hidden">
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive personal portfolio website.</p>
+      </div>
+
+      <div class="card">
+        <h3>E-Commerce Website</h3>
+        <p>Online shopping website with animations.</p>
+      </div>
+
+      <div class="card">
+        <h3>Weather App</h3>
+        <p>Live weather application using API.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="hidden">
+    <h2 class="title">Contact</h2>
+
+    <div class="contact">
+      <p>Email: vedantdalvi@422gmail.com</p>
+      <p>Phone: +91 8275282617</p>
+      <p>Website: www.yourwebsite.com</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Vedant Dalvi | All Rights Reserved
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const hiddenElements = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    hiddenElements.forEach((el)=>observer.observe(el));
+  </script>
+
+</body>
+</html>

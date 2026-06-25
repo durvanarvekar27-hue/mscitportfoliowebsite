@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rental Cars</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop')
+        center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .cars-section {
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #111827;
+    }
+
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .car-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .car-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .car-info {
+      padding: 20px;
+    }
+
+    .car-info h3 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .price {
+      color: #2563eb;
+      font-size: 20px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .features {
+      margin: 15px 0;
+      color: #555;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .hero-content h2 {
+        font-size: 36px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>DriveNow Rentals</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Cars</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Find Your Perfect Rental Car</h2>
+      <p>Affordable, luxury, and family cars available anytime.</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <section class="cars-section">
+    <h2 class="section-title">Popular Rental Cars</h2>
+
+    <div class="cars-grid">
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop" alt="Sports Car">
+
+        <div class="car-info">
+          <h3>BMW M4</h3>
+          <p class="price">$120 / day</p>
+          <p class="features">
+            Automatic • 4 Seats • Petrol
+          </p>
+          <a href="#" class="btn">Rent Now</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="SUV">
+
+        <div class="car-info">
+          <h3>Range Rover</h3>
+          <p class="price">$150 / day</p>
+          <p class="features">
+            Automatic • 7 Seats • Diesel
+          </p>
+          <a href="#" class="btn">Rent Now</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="Sedan">
+
+        <div class="car-info">
+          <h3>Tesla Model 3</h3>
+          <p class="price">$110 / day</p>
+          <p class="features">
+            Electric • 5 Seats • AutoPilot
+          </p>
+          <a href="#" class="btn">Rent Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 DriveNow Rentals. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Tasty Buds</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(to bottom right,#fff6ec,#fadadd,#dcc6e0);
+      color:#4b2e2e;
+    }
+
+    h1,h2,h3{
+      font-family:'Playfair Display',serif;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(12px);
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:#5c4033;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#d17b88;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:80px 8%;
+      gap:50px;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text h1{
+      font-size:70px;
+      line-height:1.1;
+      margin-bottom:20px;
+      color:#5c4033;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      margin-bottom:30px;
+      color:#6d5b5b;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border:none;
+      border-radius:40px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-primary{
+      background:#d17b88;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:#b55d6b;
+      transform:translateY(-3px);
+    }
+
+    .btn-secondary{
+      background:white;
+      color:#5c4033;
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+    }
+
+    .hero-image{
+      flex:1;
+    }
+
+    .hero-image img{
+      width:100%;
+      border-radius:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:48px;
+      color:#5c4033;
+    }
+
+    .section-title p{
+      margin-top:10px;
+      color:#6d5b5b;
+    }
+
+    /* PRODUCTS */
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+
+    .product-card{
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(10px);
+      border-radius:25px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .product-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .product-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .product-info{
+      padding:25px;
+    }
+
+    .product-info h3{
+      margin-bottom:10px;
+      font-size:28px;
+    }
+
+    .product-info p{
+      color:#6d5b5b;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:22px;
+      font-weight:bold;
+      color:#d17b88;
+      margin-bottom:15px;
+    }
+
+    .buy-btn{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:20px;
+      background:#5c4033;
+      color:white;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .buy-btn:hover{
+      background:#3e2b24;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:flex;
+      align-items:center;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    .about img{
+      width:500px;
+      border-radius:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .about-text{
+      flex:1;
+    }
+
+    .about-text h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      line-height:1.8;
+      margin-bottom:20px;
+      color:#6d5b5b;
+    }
+
+    /* LOGIN */
+
+    .login-section{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .login-box{
+      width:400px;
+      background:rgba(255,255,255,0.65);
+      backdrop-filter:blur(12px);
+      padding:40px;
+      border-radius:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .login-box h2{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:15px;
+      outline:none;
+      background:white;
+    }
+
+    .login-btn{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:20px;
+      background:#d17b88;
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* REVIEWS */
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .review-card{
+      background:white;
+      padding:30px;
+      border-radius:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter{
+      text-align:center;
+      background:rgba(255,255,255,0.5);
+      border-radius:30px;
+      padding:60px;
+    }
+
+    .newsletter input{
+      width:300px;
+      padding:15px;
+      border:none;
+      border-radius:20px;
+      margin-top:20px;
+      outline:none;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#5c4033;
+      color:white;
+      text-align:center;
+      padding:40px;
+      margin-top:80px;
+    }
+
+    footer h2{
+      margin-bottom:15px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:50px;
+      }
+
+      .about{
+        flex-direction:column;
+      }
+
+      .about img{
+        width:100%;
+      }
+
+      .nav-links{
+        gap:15px;
+        font-size:14px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="logo">The Tasty Buds</div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#shop">Buy</a>
+      <a href="#about">About</a>
+      <a href="#login">Login</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Freshly Baked Happiness Delivered Daily</h1>
+
+      <p>
+        Luxury handcrafted cakes, pastries, cookies, and artisan breads
+        made with premium ingredients and endless love.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Shop Now</button>
+        <button class="btn btn-secondary">Explore Menu</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="">
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section id="shop">
+
+    <div class="section-title">
+      <h2>Best Sellers</h2>
+      <p>Premium desserts crafted for sweet lovers</p>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Red Velvet Cake</h3>
+          <p>Soft layers with creamy frosting and premium cocoa.</p>
+          <div class="price">₹899</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Butter Croissant</h3>
+          <p>Freshly baked flaky French-style croissants.</p>
+          <div class="price">₹199</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Chocolate Pastry</h3>
+          <p>Rich Belgian chocolate layered pastry delight.</p>
+          <div class="price">₹299</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Macaron Box</h3>
+          <p>Luxury assorted macarons with premium fillings.</p>
+          <div class="price">₹799</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Blueberry Cheesecake</h3>
+          <p>Classic creamy cheesecake topped with blueberries.</p>
+          <div class="price">₹1199</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="product-info">
+          <h3>Sourdough Bread</h3>
+          <p>Fresh artisan sourdough loaf baked daily.</p>
+          <div class="price">₹299</div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="about-text">
+
+        <h2>About Us</h2>
+
+        <p>
+          The Tasty Buds began with a dream to turn desserts into unforgettable experiences.
+          Every cake, pastry, cookie, and bread is handcrafted with premium ingredients,
+          fresh flavors, and artistic presentation.
+        </p>
+
+        <p>
+          We believe baking is an art. Our bakers create luxury desserts inspired by
+          Parisian cafés and modern premium bakery aesthetics.
+        </p>
+
+        <p>
+          ✔ Fresh Daily <br>
+          ✔ Handmade with Love <br>
+          ✔ Premium Ingredients <br>
+          ✔ Same Day Delivery
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LOGIN -->
+
+  <section id="login" class="login-section">
+
+    <div class="login-box">
+
+      <h2>Login</h2>
+
+      <div class="input-box">
+        <input type="email" placeholder="Enter Email">
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Enter Password">
+      </div>
+
+      <button class="login-btn">Login</button>
+
+    </div>
+
+  </section>
+
+  <!-- REVIEWS -->
+
+  <section>
+
+    <div class="section-title">
+      <h2>Customer Reviews</h2>
+      <p>Sweet words from our happy customers</p>
+    </div>
+
+    <div class="reviews">
+
+      <div class="review-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          “The softest cheesecake I’ve ever had.
+          Beautiful packaging and amazing quality.”
+        </p>
+        <br>
+        <strong>- Priya M.</strong>
+      </div>
+
+      <div class="review-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          “Absolutely premium experience.
+          Their pastries taste heavenly.”
+        </p>
+        <br>
+        <strong>- Rohan K.</strong>
+      </div>
+
+      <div class="review-card">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>
+          “The website and desserts both look luxurious.
+          Highly recommended bakery!”
+        </p>
+        <br>
+        <strong>- Ayesha S.</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- NEWSLETTER -->
+
+  <section>
+
+    <div class="newsletter">
+
+      <h2>Get Sweet Updates</h2>
+
+      <p>
+        Subscribe for offers, discounts, and fresh bakery launches.
+      </p>
+
+      <input type="email" placeholder="Enter your email">
+
+      <br><br>
+
+      <button class="btn btn-primary">Subscribe</button>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>The Tasty Buds</h2>
+
+    <p>
+      Baked fresh with love every single day.
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 The Tasty Buds | Premium Bakery Store
+    </p>
+
+  </footer>
+
+</body>
+</html>

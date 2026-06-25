@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luxury Pastel Resume</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background: linear-gradient(135deg,#fdf6f0,#f6f0ff,#eef7ff);
+      padding:40px;
+      color:#333;
+    }
+
+    .resume-container{
+      max-width:950px;
+      margin:auto;
+      background:rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:
+      0 15px 40px rgba(0,0,0,0.10),
+      0 5px 15px rgba(0,0,0,0.05);
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    /* HEADER */
+
+    .header{
+      background: linear-gradient(135deg,#d8c3ff,#b7d7ff,#ffd6e7);
+      padding:50px 40px;
+      text-align:center;
+      position:relative;
+    }
+
+    .header::after{
+      content:'';
+      position:absolute;
+      bottom:-50px;
+      left:0;
+      width:100%;
+      height:100px;
+      background:white;
+      border-radius:50%;
+    }
+
+    .name{
+      font-size:42px;
+      font-weight:700;
+      letter-spacing:2px;
+      color:#2d2d2d;
+      position:relative;
+      z-index:1;
+    }
+
+    .tagline{
+      margin-top:10px;
+      font-size:16px;
+      color:#555;
+      position:relative;
+      z-index:1;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      margin-top:40px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:18px;
+      position:relative;
+      z-index:1;
+    }
+
+    .contact div{
+      background:rgba(255,255,255,0.7);
+      padding:12px 18px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:500;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* CONTENT */
+
+    .content{
+      padding:50px;
+    }
+
+    .section{
+      margin-bottom:40px;
+    }
+
+    .section-title{
+      font-size:24px;
+      color:#5b4b8a;
+      margin-bottom:25px;
+      position:relative;
+      display:inline-block;
+      font-weight:600;
+    }
+
+    .section-title::after{
+      content:'';
+      width:60%;
+      height:4px;
+      background:linear-gradient(to right,#d8c3ff,#ffcfe0);
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      border-radius:10px;
+    }
+
+    .skill-card{
+      background:linear-gradient(135deg,#fff8fb,#f4f7ff);
+      padding:22px;
+      border-radius:18px;
+      margin-bottom:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+      transition:0.3s ease;
+      border:1px solid rgba(255,255,255,0.8);
+    }
+
+    .skill-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .skill-card h3{
+      color:#444;
+      margin-bottom:12px;
+      font-size:18px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    ul li{
+      margin-bottom:10px;
+      color:#555;
+      line-height:1.7;
+    }
+
+    .badge-container{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .badge{
+      background:linear-gradient(135deg,#e8dcff,#ffdbe9);
+      color:#4a4a4a;
+      padding:10px 18px;
+      border-radius:30px;
+      font-size:14px;
+      font-weight:500;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* FOOTER */
+
+    .footer{
+      text-align:center;
+      padding:25px;
+      background:#faf7ff;
+      color:#777;
+      font-size:14px;
+      border-top:1px solid #eee;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      body{
+        padding:15px;
+      }
+
+      .content{
+        padding:30px 20px;
+      }
+
+      .name{
+        font-size:30px;
+      }
+
+      .contact{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume-container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="name">SWARA SAMEER SATARDEKAR</div>
+
+      <div class="tagline">
+        Digital Skills • AI Tools • Office Productivity • Computer Fundamentals
+      </div>
+
+      <div class="contact">
+        <div>📞 9067896252</div>
+        <div>📧 satardekarswara87@gmail.com</div>
+        <div>📍 At Post Banda, Near Post Office</div>
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <!-- TECHNICAL SKILLS -->
+
+      <div class="section">
+
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skill-card">
+          <h3>AI Tools</h3>
+
+          <div class="badge-container">
+            <div class="badge">ChatGPT</div>
+            <div class="badge">Gemini</div>
+            <div class="badge">Microsoft Copilot</div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Productivity Tools</h3>
+
+          <div class="badge-container">
+            <div class="badge">Microsoft Word</div>
+            <div class="badge">Microsoft Excel</div>
+            <div class="badge">PowerPoint</div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Internet & Communication</h3>
+
+          <div class="badge-container">
+            <div class="badge">Google Chrome</div>
+            <div class="badge">Gmail</div>
+            <div class="badge">Zoom</div>
+            <div class="badge">Cloud Storage</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SPECIAL SKILLS -->
+
+      <div class="section">
+
+        <div class="section-title">Special Skills Learned</div>
+
+        <div class="skill-card">
+          <h3>💻 Computer Fundamentals</h3>
+
+          <ul>
+            <li>Basics of computers, hardware, software, and operating systems</li>
+            <li>File management and system navigation</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>🌐 Internet & Digital Literacy</h3>
+
+          <ul>
+            <li>Web browsing, search techniques, and online safety</li>
+            <li>Email writing, attachments, and communication etiquette</li>
+            <li>Awareness of cybersecurity and digital privacy</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>📊 Office Productivity Tools</h3>
+
+          <ul>
+            <li>Word processing and professional formatting</li>
+            <li>Spreadsheets, formulas, and charts</li>
+            <li>Presentation design and animations</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>📈 Data Handling & Productivity</h3>
+
+          <ul>
+            <li>Basic data analysis and organization</li>
+            <li>Creating tables, graphs, and reports</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>☁ Digital Communication & Collaboration</h3>
+
+          <ul>
+            <li>Online meetings and virtual collaboration</li>
+            <li>Cloud storage and file sharing</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>🏛 E-Governance & Digital Services</h3>
+
+          <ul>
+            <li>Use of online government services</li>
+            <li>Digital payments, online forms, and portals</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>🧠 Problem Solving & Logical Thinking</h3>
+
+          <ul>
+            <li>Analytical and problem-solving skills</li>
+            <li>Logical thinking and task management</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      Designed with Elegant Pastel Luxury Theme
+    </div>
+
+  </div>
+
+</body>
+</html>

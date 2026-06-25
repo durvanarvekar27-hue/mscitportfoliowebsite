@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purva Topale Bikes</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.hero{
+    height:500px;
+    background:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1200') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:10px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.btn{
+    background:#ff4500;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.bikes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Purva Topale Bikes</h1>
+    <p>Ride Your Dream</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#bikes">Bikes</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Welcome to Purva Topale Bikes</h1>
+        <p>Premium Bikes with Style & Performance</p>
+        <a href="#bikes" class="btn">Explore Bikes</a>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <br>
+    <p>
+        Purva Topale Bikes is dedicated to delivering high-quality,
+        stylish, and powerful motorcycles for every rider.
+        We believe in innovation, performance, and customer satisfaction.
+    </p>
+</section>
+
+<section class="section" id="bikes">
+    <h2>Our Popular Bikes</h2>
+    <br><br>
+
+    <div class="bikes">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517846693594-1567da72af75?w=600" alt="Sport Bike">
+            <h3>Sport X1</h3>
+            <p>Top speed, sporty design, and advanced technology.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600" alt="Cruiser Bike">
+            <h3>Cruiser Pro</h3>
+            <p>Comfortable long rides with premium styling.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600" alt="Adventure Bike">
+            <h3>Adventure 500</h3>
+            <p>Built for every terrain and every adventure.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <br>
+    <p><b>Owner:</b> Purva Topale</p>
+    <p><b>Email:</b> purvatopale@example.com</p>
+    <p><b>Phone:</b> +91 XXXXX XXXXX</p>
+</section>
+
+<footer>
+    <p>© 2026 Purva Topale Bikes. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
